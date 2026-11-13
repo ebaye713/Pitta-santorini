@@ -1,0 +1,6 @@
+{
+  "name": "Pitta Santorini — Barking",
+  "description": "Authentic Greek gyros, handmade pitta wraps, portion boxes, and iced freddo coffee at 72 Longbridge Road, Barking IG11 8SF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

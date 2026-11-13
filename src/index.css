@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-aegean-950: #081c38;
+  --color-aegean-900: #0b2d5b;
+  --color-aegean-800: #0f4c81;
+  --color-aegean-700: #1565c0;
+  --color-aegean-600: #0284c7;
+  --color-aegean-50: #f2f7fc;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f3f7fc;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes aegeanGlowA {
+  0%,
+  100% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 4%, 0) scale(1.08);
+  }
+}
+
+@keyframes aegeanGlowB {
+  0%,
+  100% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-5%, -4%, 0) scale(1.06);
+  }
+}
+
+.aegean-aura-a {
+  animation: aegeanGlowA 20s ease-in-out infinite;
+}
+
+.aegean-aura-b {
+  animation: aegeanGlowB 26s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aegean-aura-a,
+  .aegean-aura-b {
+    animation: none;
+  }
+}
